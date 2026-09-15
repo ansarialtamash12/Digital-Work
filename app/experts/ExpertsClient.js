@@ -30,8 +30,7 @@ const spaceMono = Space_Mono({
 const mentors = [
   {
     name: "MR. SHIVRAJ SINGH",
-    role:
-      "Transformational Coach | Financial Markets Expert | Leadership Mentor | Sales & Marketing Strategist",
+    role: "Transformational Coach | Financial Markets Expert | Leadership Mentor | Sales & Marketing Strategist",
     image: "/profile/profile9.webp",
     description:
       "Mr. Shivraj Singh is a highly experienced Transformational Coach, Financial Markets Expert, Leadership Mentor, and Sales & Marketing Strategist with 27 years of experience in financial markets, sales, direct selling, leadership, and business development.Over nearly three decades, he has built and led teams of millions of people, gained worldwide global exposure, and played a significant role in transforming thousands of lives through coaching, leadership, financial awareness, sales expertise, and business development.",
@@ -47,8 +46,7 @@ const mentors = [
   },
   {
     name: "Mr. Ali",
-    role:
-      "Entrepreneur | Sales Strategist | Business Development Leader | IT Business Owner",
+    role: "Entrepreneur | Sales Strategist | Business Development Leader | IT Business Owner",
     image: "/profile/profile1.webp",
     description:
       "Mr. Ali is a visionary entrepreneur and accomplished sales leader with extensive experience in business development, strategic partnerships, and revenue growth. As the founder and owner of multiple IT companies, he has successfully built and scaled technology-driven businesses while leading high-performing sales teams. His expertise lies in identifying market opportunities, driving customer acquisition, and creating sustainable business growth through innovative sales strategies and strong client relationships.",
@@ -115,7 +113,7 @@ const mentors = [
       "Risk & Capital Management",
       "Fundamental & Technical Market Insights",
       "Trader Psychology & Discipline",
-      "Business Consulting & Strategic Planning", 
+      "Business Consulting & Strategic Planning",
       "Client Acquisition & Relationship Building",
       "Leadership & Business Growth",
       "Trader Relationship & Client Management",
@@ -141,7 +139,6 @@ const mentors = [
     ],
   },
 
-
   {
     name: "Prakash Janawade",
     role: "Global Trading & Investment Mentor | Stock Market Research Analyst | Financial Educator",
@@ -160,7 +157,6 @@ const mentors = [
       "Financial Market Mentoring",
     ],
   },
-
 
   {
     name: "Mr. Safdar Ali",
@@ -214,6 +210,47 @@ const mentors = [
       "Leadership & Network Development",
       "International Market Expansion",
       "Strategic Partnerships & Growth",
+    ],
+  },
+  {
+    name: "Mr. Tayyab Malik ",
+    role: "Forex & Crypto Trader | Financial Markets Mentor | Live Trading Expert | Trading Education Specialist",
+    image: "/profile/profile11.jpeg",
+    description:
+      "Tayyab Malik has 6 years of experience in the financial markets, with 4 years dedicated to mentoring students across Forex and Crypto markets. With 3 years of hands-on live trading experience, he focuses on practical, real-market learning. He regularly guides students through live market sessions, helping them understand market movements, trading strategies, and risk management. His goal is to make trading education practical, easy to understand, and useful for traders at every stage.",
+    expertise: [
+      " Forex Trading & Market Analysis",
+      " Stock Market Insights",
+      " Crypto Market Analysis",
+      " Live Trading & Market Practice",
+      " Trading Strategy Development",
+      " Technical Analysis & Chart Reading",
+      " Risk Management & Capital Protection",
+      " Practical Trading Education",
+      " Student Mentoring & Guidance",
+      " Market Psychology & Trading Discipline",
+      " Real-Time Market Learning",
+      " Trader Skill Development",
+    ],
+  },
+  {
+    name: "Mr. Lovel Rajput",
+    role: "Forex & Stock Market Expert | NISM Research Analyst | Trading Mentor | Financial Markets Educator",
+    image: "/profile/profile10.jpeg",
+    description:
+      "Lovel Rajput began his trading journey in 2016 and brings over a decade of experience in the financial markets, including expertise in Forex, Crypto, stock markets, and options trading. As a NISM-certified Research Analyst and experienced trading mentor, he has trained over 22K students, focusing on making trading simple, practical, and easy to understand. Through his academy and trading community, Lovel shares real-market knowledge, develops disciplined traders, and helps learners build confidence through effective strategies, market analysis, and practical education.",
+    expertise: [
+      "Forex Trading Education & Mentoring",
+      "Stock Market Analysis",
+      "Options Trading & Strategies",
+      "Forex & Currency Market Analysis",
+      "Crypto Market Insights",
+      "Technical & Fundamental Analysis",
+      "Trading Strategy Development",
+      "Trader Psychology & Discipline",
+      "Market Research & Decision Making",
+      "Portfolio & Trade Management",
+      "Financial Market Mentoring",
     ],
   },
 ];
@@ -479,12 +516,14 @@ function Badge3D({ type, size = "md" }) {
 function Eyebrow({ children, dark = false, center = true }) {
   return (
     <span
-      className={`inline-flex items-center gap-2 font-[family-name:var(--font-mono)] text-[10px] font-bold uppercase tracking-[0.25em] ${dark ? "text-[#0CBFFF]" : "text-[#0CBFFF]"
-        } ${center ? "justify-center" : ""}`}
+      className={`inline-flex items-center gap-2 font-[family-name:var(--font-mono)] text-[10px] font-bold uppercase tracking-[0.25em] ${
+        dark ? "text-[#0CBFFF]" : "text-[#0CBFFF]"
+      } ${center ? "justify-center" : ""}`}
     >
       <span
-        className={`h-1.5 w-1.5 rounded-full ${dark ? "bg-[#0CBFFF]" : "bg-[#0CBFFF]"
-          }`}
+        className={`h-1.5 w-1.5 rounded-full ${
+          dark ? "bg-[#0CBFFF]" : "bg-[#0CBFFF]"
+        }`}
       />
 
       {children}
@@ -518,7 +557,7 @@ function Section4() {
       },
       {
         threshold: 0.15,
-      }
+      },
     );
 
     elements.forEach((el) => observer.observe(el));
@@ -545,10 +584,7 @@ function Section4() {
           const start = performance.now();
 
           const updateCounter = (now) => {
-            const progress = Math.min(
-              (now - start) / duration,
-              1
-            );
+            const progress = Math.min((now - start) / duration, 1);
 
             const eased = 1 - Math.pow(1 - progress, 3);
 
@@ -568,7 +604,7 @@ function Section4() {
       },
       {
         threshold: 0.5,
-      }
+      },
     );
 
     counterObserver.observe(counterElement);
@@ -676,9 +712,8 @@ function Section4() {
           FACULTY / PROFILES
       ====================================================== */}
 
-      <section className="bg-[#f8f9fa] px-5 py-16 md:py-20">
+        <section className="bg-[#f8f9fa] px-5 py-16 md:py-20">
         <div className="mx-auto max-w-[1180px]">
-
           {/* HEADING */}
 
           <div
@@ -692,10 +727,10 @@ function Section4() {
             </h2>
 
             <p className="mx-auto mt-4 max-w-[640px] text-[15px] leading-[1.7] text-[#4a4a6a] md:text-[16px]">
-              Master every aspect of forex trading with industry experts.
-              Learn everything from the basics to advanced strategies,
-              covering risk management, technical analysis, and trading
-              psychology through simple, practical lessons.
+              Master every aspect of forex trading with industry experts. Learn
+              everything from the basics to advanced strategies, covering risk
+              management, technical analysis, and trading psychology through
+              simple, practical lessons.
             </p>
           </div>
 
@@ -705,8 +740,8 @@ function Section4() {
 
           <div
             data-reveal
-            className="relative translate-y-6 opacity-0 transition-all duration-700 data-[visible=true]:translate-y-0 data-[visible=true]:opacity-100">
-
+            className="relative translate-y-6 opacity-0 transition-all duration-700 data-[visible=true]:translate-y-0 data-[visible=true]:opacity-100"
+          >
             {/* LEFT ARROW */}
 
             <button
@@ -784,7 +819,6 @@ function Section4() {
                   className="!h-auto"
                 >
                   <div className="group flex h-full flex-col overflow-hidden rounded-[12px] border-2 border-[#0CBFFF]/30 bg-white shadow-[0_3px_16px_rgba(15,23,42,0.04)] transition-all duration-300 hover:-translate-y-1 hover:border-[#0CBFFF] hover:shadow-[0_10px_30px_rgba(12,191,255,0.20)]">
-
                     {/* IMAGE */}
 
                     <div className="h-[250px] w-full shrink-0 overflow-hidden bg-slate-200">
@@ -802,7 +836,6 @@ function Section4() {
                     {/* CONTENT */}
 
                     <div className="flex flex-1 flex-col p-5">
-
                       <h3 className="text-[20px] font-bold leading-tight text-[#1a1a2e] transition-colors duration-300 group-hover:text-[#0CBFFF]">
                         {mentor.name}
                       </h3>
@@ -825,15 +858,12 @@ function Section4() {
                             key={item}
                             className="text-[13px] leading-[1.5] text-[#4a4a6a]"
                           >
-                            <span className="mr-1 text-[#0CBFFF]">
-                              •
-                            </span>
+                            <span className="mr-1 text-[#0CBFFF]">•</span>
 
                             {item}
                           </li>
                         ))}
                       </ul>
-
                     </div>
                   </div>
                 </SwiperSlide>
@@ -862,10 +892,16 @@ function Section4() {
                 <path d="M9 18l6-6-6-6" />
               </svg>
             </button>
-
           </div>
         </div>
       </section>
+
+
+
+
+
+
+
 
       {/* =====================================================
           CERTIFICATIONS
@@ -873,7 +909,6 @@ function Section4() {
 
       <section className="bg-white px-5 py-16 md:py-20">
         <div className="mx-auto max-w-[1180px]">
-
           <div
             data-reveal
             className="mx-auto mb-10 max-w-[720px] text-center opacity-0 transition-all duration-700 data-[visible=true]:opacity-100"
@@ -919,7 +954,6 @@ function Section4() {
 
       <section className="bg-[#f8f9fa] px-5 py-16 md:py-20">
         <div className="mx-auto max-w-[1180px]">
-
           <div
             data-reveal
             className="mx-auto mb-10 max-w-[720px] text-center opacity-0 transition-all duration-700 data-[visible=true]:opacity-100"
@@ -927,8 +961,8 @@ function Section4() {
             <Eyebrow>Our Teaching Philosophy</Eyebrow>
 
             <h2 className="mt-3 font-['Inter'] text-[24px] font-bold leading-[1.25] tracking-[-0.015em] text-[#1a1a2e] md:text-[30px]">
-              Building Skilled, Disciplined, and Confident Forex Traders
-              Across the Globe.
+              Building Skilled, Disciplined, and Confident Forex Traders Across
+              the Globe.
             </h2>
           </div>
 
@@ -1015,7 +1049,6 @@ function Section4() {
 
       <section className="bg-[#f8f9fa] px-5 py-16 md:py-20">
         <div className="mx-auto max-w-[1180px]">
-
           <div
             data-reveal
             className="mx-auto mb-10 text-center opacity-0 transition-all duration-700 data-[visible=true]:opacity-100"
@@ -1081,8 +1114,8 @@ function Section4() {
 
             <p className="relative mx-auto mt-4 max-w-[560px] text-[15px] leading-[1.75] text-slate-400 md:text-[16px]">
               Every course on ForPips is taught or reviewed by this faculty —
-              practical strategies, real risk management, and proven
-              techniques, not empty promises.
+              practical strategies, real risk management, and proven techniques,
+              not empty promises.
             </p>
 
             <Link

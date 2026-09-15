@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import {
   BarChart3,
@@ -33,6 +33,14 @@ import {
   Gauge,
 } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
+import { Poppins, Space_Mono } from "next/font/google";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/navigation";
 
 const EYEBROW = "text-[#0CBFFF] text-xs font-bold uppercase tracking-[0.22em]";
 
@@ -50,23 +58,23 @@ const FEATURES = [
   {
     icon: BookOpen,
     title: "Build a Strong Market Foundation",
-    desc: "Explore how the global forex market works and who participates in it, including institutions, businesses, and individual traders."
+    desc: "Explore how the global forex market works and who participates in it, including institutions, businesses, and individual traders.",
   },
   {
     icon: TrendingUp,
     title: "Master Chart Analysis",
-    desc: "Learn to read price charts and spot trading opportunities using chart patterns, technical indicators, trend analysis, and price action."
+    desc: "Learn to read price charts and spot trading opportunities using chart patterns, technical indicators, trend analysis, and price action.",
   },
   {
     icon: ShieldCheck,
     title: "Smart Risk Management",
-    desc: "Manage your trading capital with proper position sizing, stop-loss levels, risk-to-reward ratios, and disciplined exposure control."
+    desc: "Manage your trading capital with proper position sizing, stop-loss levels, risk-to-reward ratios, and disciplined exposure control.",
   },
   {
     icon: Brain,
     title: "Strengthen Your Trading Mindset",
-    desc: "Learn to control emotions such as fear, greed, and impatience while developing the discipline to follow your trading plan."
-  }
+    desc: "Learn to control emotions such as fear, greed, and impatience while developing the discipline to follow your trading plan.",
+  },
 ];
 
 function FeatureCard({ icon: Icon, title, desc }) {
@@ -75,7 +83,9 @@ function FeatureCard({ icon: Icon, title, desc }) {
       <div className="w-11 h-11 rounded-xl bg-[#0CBFFF]/10 flex items-center justify-center mb-4 transition-all duration-300 group-hover:bg-[#0CBFFF]">
         <Icon className="w-5 h-5 text-[#0CBFFF] transition-all duration-300 group-hover:text-white" />
       </div>
-      <h3 className="font-semibold text-[#1a1a2e] mb-2 font-['Inter'] transition-colors duration-300 group-hover:text-[#0CBFFF]">{title}</h3>
+      <h3 className="font-semibold text-[#1a1a2e] mb-2 font-['Inter'] transition-colors duration-300 group-hover:text-[#0CBFFF]">
+        {title}
+      </h3>
       <p className="text-sm text-[#4a4a6a] leading-relaxed">{desc}</p>
     </div>
   );
@@ -86,7 +96,7 @@ const STATS = [
   { icon: Award, value: "20+", label: "Years market experience" },
   { icon: BookOpen, value: "12+", label: "Free modules" },
   { icon: Users, value: "18,000+", label: "Students taught" },
-  { icon: Headphones, value: "24/7", label: "Live support" }
+  { icon: Headphones, value: "24/7", label: "Live support" },
 ];
 
 function StatItem({ icon: Icon, value, label }) {
@@ -96,7 +106,9 @@ function StatItem({ icon: Icon, value, label }) {
         <Icon className="w-5 h-5 text-[#0CBFFF] transition-all duration-300 group-hover:text-white" />
       </div>
       <div>
-        <p className="text-2xl font-bold text-[#1a1a2e] leading-none">{value}</p>
+        <p className="text-2xl font-bold text-[#1a1a2e] leading-none">
+          {value}
+        </p>
         <p className="text-xs text-[#4a4a6a] mt-1">{label}</p>
       </div>
     </div>
@@ -105,70 +117,326 @@ function StatItem({ icon: Icon, value, label }) {
 
 // Module Cards with different icons
 const FOREX_MODULES = [
-  { 
-    title: "Forex Basics", 
+  {
+    title: "Forex Basics",
     icon: Globe2,
-    items: ["What is Forex?", "Currency Pairs", "Trading Sessions", "Pips, Lots & Leverage"] 
+    items: [
+      "What is Forex?",
+      "Currency Pairs",
+      "Trading Sessions",
+      "Pips, Lots & Leverage",
+    ],
   },
-  { 
-    title: "Market Structure", 
+  {
+    title: "Market Structure",
     icon: Layers,
-    items: ["Market Mechanics", "Major Participants", "Liquidity", "Market Makers"] 
+    items: [
+      "Market Mechanics",
+      "Major Participants",
+      "Liquidity",
+      "Market Makers",
+    ],
   },
-  { 
-    title: "Technical Analysis", 
+  {
+    title: "Technical Analysis",
     icon: TrendingUp,
-    items: ["Market Structure", "Support & Resistance", "Candlestick Patterns", "Trend Analysis"] 
+    items: [
+      "Market Structure",
+      "Support & Resistance",
+      "Candlestick Patterns",
+      "Trend Analysis",
+    ],
   },
-  { 
-    title: "Risk Management", 
+  {
+    title: "Risk Management",
     icon: ShieldCheck,
-    items: ["Position Sizing", "Stop Loss", "Risk-to-Reward", "Capital Management"] 
+    items: [
+      "Position Sizing",
+      "Stop Loss",
+      "Risk-to-Reward",
+      "Capital Management",
+    ],
   },
-  { 
-    title: "Fundamental Analysis", 
+  {
+    title: "Fundamental Analysis",
     icon: PieChart,
-    items: ["Economic Indicators", "Economic News", "Market Sentiment", "Economic Calendar"] 
+    items: [
+      "Economic Indicators",
+      "Economic News",
+      "Market Sentiment",
+      "Economic Calendar",
+    ],
   },
-  { 
-    title: "Smart Money Concepts (SMC)", 
+  {
+    title: "Smart Money Concepts (SMC)",
     icon: Zap,
-    items: ["Break of Structure", "Change of Character", "Order Blocks", "Fair Value Gaps"] 
-  }
+    items: [
+      "Break of Structure",
+      "Change of Character",
+      "Order Blocks",
+      "Fair Value Gaps",
+    ],
+  },
 ];
 
 const STOCK_MODULES = [
-  { 
-    title: "Equity Basics", 
+  {
+    title: "Equity Basics",
     icon: BarChart3,
-    items: ["Stock types", "Market mechanics", "Order types", "Trading hours"] 
+    items: ["Stock types", "Market mechanics", "Order types", "Trading hours"],
   },
-  { 
-    title: "Fundamental Analysis", 
+  {
+    title: "Fundamental Analysis",
     icon: PieChart,
-    items: ["Financial ratios", "Balance sheets", "Income statements", "Cash flow analysis"] 
+    items: [
+      "Financial ratios",
+      "Balance sheets",
+      "Income statements",
+      "Cash flow analysis",
+    ],
   },
-  { 
-    title: "Chart Reading", 
+  {
+    title: "Chart Reading",
     icon: LineChart,
-    items: ["Candlestick patterns", "Trend analysis", "Volume indicators", "Moving averages"] 
+    items: [
+      "Candlestick patterns",
+      "Trend analysis",
+      "Volume indicators",
+      "Moving averages",
+    ],
   },
-  { 
-    title: "Portfolio Concepts", 
+  {
+    title: "Portfolio Concepts",
     icon: Layers,
-    items: ["Diversification", "Asset allocation", "Rebalancing", "Portfolio theory"] 
+    items: [
+      "Diversification",
+      "Asset allocation",
+      "Rebalancing",
+      "Portfolio theory",
+    ],
   },
-  { 
-    title: "Market Cycles", 
+  {
+    title: "Market Cycles",
     icon: Activity,
-    items: ["Bull markets", "Bear markets", "Economic indicators", "Sector rotation"] 
+    items: [
+      "Bull markets",
+      "Bear markets",
+      "Economic indicators",
+      "Sector rotation",
+    ],
   },
-  { 
-    title: "Investment Research", 
+  {
+    title: "Investment Research",
     icon: Target,
-    items: ["Company analysis", "Industry research", "Competitive analysis", "Risk assessment"] 
-  }
+    items: [
+      "Company analysis",
+      "Industry research",
+      "Competitive analysis",
+      "Risk assessment",
+    ],
+  },
 ];
+
+// Mentors
+const mentors = [
+  {
+    name: "MR. SHIVRAJ SINGH",
+    role: "Transformational Coach | Financial Markets Expert | Leadership Mentor | Sales & Marketing Strategist",
+    image: "/profile/profile9.webp",
+    description:
+      "Mr. Shivraj Singh is a highly experienced Transformational Coach, Financial Markets Expert, Leadership Mentor, and Sales & Marketing Strategist with 27 years of experience in financial markets, sales, direct selling, leadership, and business development.Over nearly three decades, he has built and led teams of millions of people, gained worldwide global exposure, and played a significant role in transforming thousands of lives through coaching, leadership, financial awareness, sales expertise, and business development.",
+    expertise: [
+      "Transformational Coaching & Mentoring",
+      "Financial Markets & Market Knowledge",
+      "Leadership Development & Team Building",
+      "Sales & Marketing Strategy",
+      "Direct Selling & Business Development",
+      "People Development & Motivation",
+      "Global Networking & Exposure",
+    ],
+  },
+  {
+    name: "Mr. Ali",
+    role: "Entrepreneur | Sales Strategist | Business Development Leader | IT Business Owner",
+    image: "/profile/profile1.webp",
+    description:
+      "Mr. Ali is a visionary entrepreneur and accomplished sales leader with extensive experience in business development, strategic partnerships, and revenue growth. As the founder and owner of multiple IT companies, he has successfully built and scaled technology-driven businesses while leading high-performing sales teams. His expertise lies in identifying market opportunities, driving customer acquisition, and creating sustainable business growth through innovative sales strategies and strong client relationships.",
+    expertise: [
+      "Sales Leadership & Business Development",
+      "Revenue Growth & Strategic Partnerships",
+      "Client Acquisition & Relationship Management",
+      "Entrepreneurship & Business Strategy",
+      "IT Services & Digital Solutions",
+      "Team Leadership & Organizational Growth",
+      "Forex Market & Trading Industry Understanding",
+    ],
+  },
+
+  {
+    name: "Mr. Khushal Sharma",
+    role: "Entrepreneur | Business Strategist | Forex Educator",
+    image: "/profile/profile5.webp",
+    description:
+      "Mr. Khushal Sharma is an entrepreneur and forex educator with 10+ years of experience in business development, financial markets, and leadership. He is passionate about helping traders build strong market knowledge, develop disciplined trading approaches, and understand the opportunities within the global forex market.",
+    expertise: [
+      "Forex Trading Education",
+      "Market Structure & Price Action",
+      "Technical & Fundamental Analysis",
+      "Risk Management & Trading Discipline",
+      "Trading Psychology & Trader Mindset",
+      "Forex Market Analysis & Strategy",
+      "Currency Pairs & Market Dynamics",
+      "Business Development & Sales Strategy",
+      "Client Relationship & Trader Support",
+      "Forex Industry & Market Opportunities",
+    ],
+  },
+
+  {
+    name: "Mr. Baha",
+    role: "Marketing Strategist | Business Visionary | Global Entrepreneur",
+    image: "/profile/profile3.webp",
+    description:
+      "Mr. Baha is a globally recognized marketing strategist and entrepreneur with 21+ years of experience in business growth, brand development, and international markets. He brings strong expertise in financial market positioning, forex business development, strategic growth, and building long-term client relationships across global markets.",
+    expertise: [
+      "Forex Business & Market Strategy",
+      "Financial Market Positioning",
+      "Global Marketing & Brand Strategy",
+      "Forex Client Acquisition & Growth",
+      "Business Development & Market Expansion",
+      "Strategic Partnerships & Networking",
+      "Sales Growth & Performance",
+      "International Market Opportunities",
+      "Forex Business Development & Partnerships",
+    ],
+  },
+
+  {
+    name: "Mr. Mukesh Jha",
+    role: "Business Consultant | Entrepreneur | Forex Mentor",
+    image: "/profile/profile4.webp",
+    description:
+      "Mr. Mukesh Jha is a seasoned business consultant and forex mentor with 17+ years of experience in business management, financial markets, and strategic planning. He focuses on helping professionals and traders develop practical market knowledge, manage risk effectively, and build a structured approach toward forex trading and business growth.",
+    expertise: [
+      "Forex Trading Education & Mentoring",
+      "Currency Market Analysis",
+      "Trading Strategy Development",
+      "Risk & Capital Management",
+      "Fundamental & Technical Market Insights",
+      "Trader Psychology & Discipline",
+      "Business Consulting & Strategic Planning",
+      "Client Acquisition & Relationship Building",
+      "Leadership & Business Growth",
+      "Trader Relationship & Client Management",
+    ],
+  },
+
+  {
+    name: "Mr. Dushyant Kumar",
+    role: "Business Leader | Growth Strategist | Corporate Mentor",
+    image: "/profile/profile2.webp",
+    description:
+      "Mr. Dushyant Kumar is an accomplished business leader and corporate strategist with 10+ years of experience in business development, leadership, and organizational growth. He brings a strong understanding of financial markets and business expansion, helping professionals and entrepreneurs identify opportunities and build sustainable growth strategies.",
+    expertise: [
+      "Business Strategy & Market Planning",
+      "Forex & Financial Market Understanding",
+      "Business Development & Expansion",
+      "Sales & Revenue Growth",
+      "Strategic Partnerships",
+      "Leadership & Team Development",
+      "Client Acquisition & Relationship Management",
+      "Financial Market Opportunities",
+      "Corporate Growth & Decision Making",
+    ],
+  },
+
+  {
+    name: "Prakash Janawade",
+    role: "Global Trading & Investment Mentor | Stock Market Research Analyst | Financial Educator",
+    image: "/profile/profile6.webp",
+    description:
+      "Prakash Janawade is a globally focused trading and investment mentor with 10+ years of real-world market experience, dedicated to making financial markets practical, structured, and easier to understand. As a NISM Certified Research Analyst and AMFI Certified professional, he combines market research, technical analysis, trading psychology, risk management, and systematic decisionmaking to help traders and investors build confidence and make informed decisions.",
+    expertise: [
+      "Stock Market Research & Analysis",
+      "Trading & Investment Education",
+      "Technical & Fundamental Analysis",
+      "Equities, Indices & Derivatives",
+      "Forex, Gold & Commodities",
+      "Algorithmic Trading & Trading Systems",
+      "Risk Management & Trading Psychology",
+      "Portfolio Building & Investment Strategies",
+      "Financial Market Mentoring",
+    ],
+  },
+
+  {
+    name: "Mr. Safdar Ali",
+    role: "Forex Educator | Trading Mentor | Sales & Business Development Specialist",
+    image: "/profile/profile7.webp",
+    description:
+      "Safdar Ali is an experienced Forex educator and trading mentor with extensive international experience in financial markets, sales, client relationships, and business development. With a strong background in building global networks and mentoring people across different markets, he focuses on making Forex trading, market understanding, risk management, and trading psychology practical and easy to understand.",
+    expertise: [
+      "Forex Trading Education",
+      "Market Understanding & Analysis",
+      "Trading Psychology & Discipline",
+      "Risk Management",
+      "Client & Trader Mentoring",
+      "Forex Business & Sales Strategy",
+      "Network & Team Development",
+      "Trading & Business Psychology",
+      "International Market Experience",
+    ],
+  },
+
+  {
+    name: "Akanksha Saxena ",
+    role: "Entrepreneur | Forex & Web3 Leader | Marketing Head | Financial Markets Mentor",
+    image: "/profile/profile8.webp",
+    description:
+      " Ms. Akanksha Saxena is a seasoned entrepreneur, marketing leader, and financial markets mentor with 8+ years of experience across Forex, Web3, digital assets, business growth, and strategic marketing. She combines market knowledge, entrepreneurial vision, and leadership expertise to build strong networks, drive business growth, and help individuals understand emerging financial opportunities.",
+    expertise: [
+      "Forex & Financial Markets",
+      "Web3 & Digital Assets",
+      "Trading & Market Education",
+      "Sales & Business Development",
+      "Strategic Marketing & Branding",
+      "Business & Network Growth ",
+      "Leadership & Team Development",
+      "Trading Psychology & Risk Management",
+      "Forex Industry Growth & Market Opportunities",
+    ],
+  },
+  {
+    name: "Ms. Sadaf Ali",
+    role: "Financial Markets Expert | Global Network Builder | Trading & Business Development Leader",
+    image: "/profile/Sadaf.png",
+    description:
+      "Sadaf Ali is an experienced Financial Markets Professional with strong expertise in trading, digital assets, exchanges, business development, and global team building. Since 2023, Sadaf has built and led large international networks comprising thousands of members, with experience across multiple financial and digital-asset platforms and involvement in building and developing multimillion-dollar business operations.",
+    expertise: [
+      "Financial Markets & Trading",
+      "Digital Assets & Exchanges",
+      "Global Team Building",
+      "Business Development",
+      "Investor & Client Relations",
+      "Leadership & Network Development",
+      "International Market Expansion",
+      "Strategic Partnerships & Growth",
+    ],
+  },
+];
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function ModuleCard({ title, icon: Icon, items }) {
   return (
@@ -176,16 +444,24 @@ function ModuleCard({ title, icon: Icon, items }) {
       <div className="w-11 h-11 rounded-xl bg-[#0CBFFF]/10 flex items-center justify-center mb-4 transition-all duration-300 group-hover:bg-[#0CBFFF]">
         <Icon className="w-5 h-5 text-[#0CBFFF] transition-all duration-300 group-hover:text-white" />
       </div>
-      <h3 className="font-semibold text-[#1a1a2e] mb-3 font-['Inter'] transition-colors duration-300 group-hover:text-[#0CBFFF]">{title}</h3>
+      <h3 className="font-semibold text-[#1a1a2e] mb-3 font-['Inter'] transition-colors duration-300 group-hover:text-[#0CBFFF]">
+        {title}
+      </h3>
       <ul className="space-y-1.5 mb-4">
         {items.map((item) => (
-          <li key={item} className="text-sm text-[#4a4a6a] flex items-start gap-2">
+          <li
+            key={item}
+            className="text-sm text-[#4a4a6a] flex items-start gap-2"
+          >
             <span className="w-1.5 h-1.5 rounded-full bg-[#0CBFFF] mt-2 shrink-0" />
             {item}
           </li>
         ))}
       </ul>
-      <a href="#" className="text-sm font-semibold text-[#0CBFFF] inline-flex items-center gap-1 hover:gap-2 transition-all group-hover:gap-2">
+      <a
+        href="#"
+        className="text-sm font-semibold text-[#0CBFFF] inline-flex items-center gap-1 hover:gap-2 transition-all group-hover:gap-2"
+      >
         Start Learning <ArrowRight className="w-3.5 h-3.5" />
       </a>
     </div>
@@ -198,20 +474,20 @@ const PATH_STEPS = [
     num: "01",
     icon: BookOpen,
     title: "Learn the Basics",
-    desc: "Master the fundamentals of Forex Trading, market structure, liquidity, currency pairs, and trading concepts to build a strong career."
+    desc: "Master the fundamentals of Forex Trading, market structure, liquidity, currency pairs, and trading concepts to build a strong career.",
   },
   {
     num: "02",
     icon: Compass,
     title: "Practice & Execute",
-    desc: "Use your knowledge through chart analysis, risk management, and real market examples."
+    desc: "Use your knowledge through chart analysis, risk management, and real market examples.",
   },
   {
     num: "03",
     icon: Rocket,
     title: "Trade with Confidence",
-    desc: "Develop a professional trading plan, refine your strategy, and build consistency through disciplined execution."
-  }
+    desc: "Develop a professional trading plan, refine your strategy, and build consistency through disciplined execution.",
+  },
 ];
 
 function PathStep({ num, icon: Icon, title, desc }) {
@@ -221,7 +497,9 @@ function PathStep({ num, icon: Icon, title, desc }) {
       <div className="w-11 h-11 rounded-xl bg-[#0CBFFF]/10 flex items-center justify-center my-4 transition-all duration-300 group-hover:bg-[#0CBFFF]">
         <Icon className="w-5 h-5 text-[#0CBFFF] transition-all duration-300 group-hover:text-white" />
       </div>
-      <h3 className="font-semibold text-[#1a1a2e] mb-2 transition-colors duration-300 group-hover:text-[#0CBFFF]">{title}</h3>
+      <h3 className="font-semibold text-[#1a1a2e] mb-2 transition-colors duration-300 group-hover:text-[#0CBFFF]">
+        {title}
+      </h3>
       <p className="text-sm text-[#4a4a6a] leading-relaxed">{desc}</p>
     </div>
   );
@@ -235,7 +513,10 @@ function StyleCard({ icon: Icon, title, desc, link, href }) {
       </div>
       <h3 className="font-semibold text-slate-900 mb-2">{title}</h3>
       <p className="text-sm text-slate-500 leading-relaxed mb-3">{desc}</p>
-      <a href={href} className="text-sm font-semibold text-sky-600 inline-flex items-center gap-1 hover:gap-2 transition-all">
+      <a
+        href={href}
+        className="text-sm font-semibold text-sky-600 inline-flex items-center gap-1 hover:gap-2 transition-all"
+      >
         {link} <ArrowRight className="w-3.5 h-3.5" />
       </a>
     </div>
@@ -251,10 +532,16 @@ function FaqItem({ q, a, isOpen, onClick }) {
       >
         <span className="font-semibold text-[#1a1a2e]">{q}</span>
         <span className="shrink-0 w-6 h-6 rounded-full bg-[#0CBFFF]/10 flex items-center justify-center text-[#0CBFFF]">
-          {isOpen ? <Minus className="w-3.5 h-3.5" /> : <Plus className="w-3.5 h-3.5" />}
+          {isOpen ? (
+            <Minus className="w-3.5 h-3.5" />
+          ) : (
+            <Plus className="w-3.5 h-3.5" />
+          )}
         </span>
       </button>
-      {isOpen && <p className="text-sm text-[#4a4a6a] mt-3 leading-relaxed pr-8">{a}</p>}
+      {isOpen && (
+        <p className="text-sm text-[#4a4a6a] mt-3 leading-relaxed pr-8">{a}</p>
+      )}
     </div>
   );
 }
@@ -287,7 +574,9 @@ export default function AcademyClient() {
       <section className="bg-[#0B1220] relative overflow-hidden">
         <div className="max-w-6xl mx-auto px-6 pt-20 pb-24 grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <SectionEyebrow>Education First. Investment decisions are always yours.</SectionEyebrow>
+            <SectionEyebrow>
+              Education First. Investment decisions are always yours.
+            </SectionEyebrow>
             <h1 className="text-4xl md:text-5xl font-extrabold text-white mt-5 leading-tight font-['Inter']">
               Your Gateway to
               <br />
@@ -296,9 +585,10 @@ export default function AcademyClient() {
               <span className="text-[#0CBFFF]">Education.</span>
             </h1>
             <p className="text-slate-400 mt-5 max-w-md leading-relaxed">
-              Build a strong foundation in forex trading and stock market. Explore
-              technical analysis, risk management, and trading psychology with easy
-              to understand lessons dedicated for every trader.
+              Build a strong foundation in forex trading and stock market.
+              Explore technical analysis, risk management, and trading
+              psychology with easy to understand lessons dedicated for every
+              trader.
             </p>
             <div className="flex items-center gap-4 mt-8">
               <Link href="https://t.me/gtcgofullsupport" target="_blank">
@@ -306,7 +596,10 @@ export default function AcademyClient() {
                   Enroll Now
                 </button>
               </Link>
-              <Link href="https://www.youtube.com/@forpipsEducation" target="_blank">
+              <Link
+                href="https://www.youtube.com/@forpipsEducation"
+                target="_blank"
+              >
                 <button className="inline-flex items-center justify-center gap-2 rounded-full border border-white/25 px-6 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:border-[#02BFFD] hover:shadow-[0_0_15px_rgba(2,191,253,0.35)]">
                   View Curriculum
                 </button>
@@ -321,14 +614,20 @@ export default function AcademyClient() {
                 <GraduationCap className="w-5 h-5 text-white" />
               </div>
               <div>
-                <p className="text-2xl font-extrabold leading-none tracking-tight text-[#1a1a2e]">12</p>
-                <p className="text-xs text-[#4a4a6a] font-medium tracking-wide">Free Modules</p>
+                <p className="text-2xl font-extrabold leading-none tracking-tight text-[#1a1a2e]">
+                  12
+                </p>
+                <p className="text-xs text-[#4a4a6a] font-medium tracking-wide">
+                  Free Modules
+                </p>
               </div>
             </div>
 
             <div className="bg-[#101a2c] border border-white/10 rounded-2xl p-5 pt-8 shadow-2xl">
               <div className="flex items-center justify-end text-white text-sm mb-4">
-                <span className="text-[10px] text-slate-500">forpips.com/education</span>
+                <span className="text-[10px] text-slate-500">
+                  forpips.com/education
+                </span>
               </div>
 
               <div className="bg-[#0b1424] rounded-xl p-4 border border-white/5">
@@ -350,8 +649,11 @@ export default function AcademyClient() {
                   ].map((row) => (
                     <li
                       key={row.label}
-                      className={`flex items-center gap-2 text-sm rounded-lg px-3 py-2 ${row.state === "active" ? "bg-white/5 text-white" : "text-slate-400"
-                        }`}
+                      className={`flex items-center gap-2 text-sm rounded-lg px-3 py-2 ${
+                        row.state === "active"
+                          ? "bg-white/5 text-white"
+                          : "text-slate-400"
+                      }`}
                     >
                       {row.state === "done" ? (
                         <CheckCircle2 className="w-4 h-4 text-[#0CBFFF]" />
@@ -370,8 +672,12 @@ export default function AcademyClient() {
                 <Clock className="w-5 h-5 text-white" />
               </div>
               <div>
-                <p className="text-[#1a1a2e] text-sm font-bold leading-none">Self-Paced</p>
-                <p className="text-xs text-[#4a4a6a] font-medium mt-1">Learn Anytime</p>
+                <p className="text-[#1a1a2e] text-sm font-bold leading-none">
+                  Self-Paced
+                </p>
+                <p className="text-xs text-[#4a4a6a] font-medium mt-1">
+                  Learn Anytime
+                </p>
               </div>
             </div>
           </div>
@@ -396,8 +702,196 @@ export default function AcademyClient() {
         </div>
       </section>
 
+      {/* Experts */}
+     <section className="bg-slate-100/70 py-20">
+  <div className="max-w-6xl mx-auto px-6">
+
+    {/* HEADING */}
+
+   
+      <SectionEyebrow>Our Faculty</SectionEyebrow>
+
+      <h2 className="text-3xl md:text-4xl font-extrabold mt-4 font-['Inter'] max-w-xl leading-tight text-[#1a1a2e]">
+        Explore Four Specializations Within One Faculty.
+      </h2>
+
+      <p className="text-[#4a4a6a] mt-4 max-w-2xl leading-relaxed">
+        Master every aspect of forex trading with industry experts.
+        Learn everything from the basics to advanced strategies,
+        covering risk management, technical analysis, and trading
+        psychology through simple, practical lessons.
+      </p>
+
+    {/* =================================================
+        CAROUSEL
+    ================================================= */}
+
+    <div
+      className="relative mt-10 translate-y-6 transition-all duration-700"
+    >
+
+      {/* LEFT ARROW */}
+
+      <button
+        type="button"
+        className="mentor-prev absolute left-[-18px] top-1/2 z-30 flex h-11 w-11 -translate-y-1/2 items-center justify-center 
+        rounded-full border border-[#0CBFFF]/30 bg-white text-[#0CBFFF] shadow-[0_5px_20px_rgba(15,23,42,0.12)] transition-all 
+        duration-300 hover:bg-[#0CBFFF] hover:text-white hover:shadow-[0_8px_25px_rgba(12,191,255,0.35)] max-xl:left-[-10px] max-md:left-[-15px]"
+        aria-label="Previous mentor"
+      >
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M15 18l-6-6 6-6" />
+        </svg>
+      </button>
+
+      {/* SWIPER */}
+
+      <Swiper
+        modules={[Autoplay, Navigation]}
+        loop={true}
+        speed={700}
+        slidesPerView={1}
+        spaceBetween={20}
+        centeredSlides={false}
+        watchOverflow={false}
+        grabCursor={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        }}
+        navigation={{
+          prevEl: ".mentor-prev",
+          nextEl: ".mentor-next",
+        }}
+        breakpoints={{
+          0: {
+            slidesPerView: 1,
+            spaceBetween: 14,
+          },
+
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 16,
+          },
+
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 18,
+          },
+
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+
+          1280: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+        }}
+        className="!overflow-hidden !px-1"
+      >
+        {mentors.map((mentor, index) => (
+          <SwiperSlide
+            key={`${mentor.name}-${index}`}
+            className="!h-auto"
+          >
+            <div className="group flex h-full flex-col overflow-hidden rounded-[12px] border-2 border-[#0CBFFF]/30 bg-white shadow-[0_3px_16px_rgba(15,23,42,0.04)] transition-all duration-300 hover:-translate-y-1 hover:border-[#0CBFFF] hover:shadow-[0_10px_30px_rgba(12,191,255,0.20)]">
+
+              {/* IMAGE */}
+
+              <div className="h-[250px] w-full shrink-0 overflow-hidden bg-slate-200">
+                <Image
+                  src={mentor.image}
+                  alt={mentor.name}
+                  width={400}
+                  height={250}
+                  sizes="(max-width: 639px) 100vw, (max-width: 767px) 50vw, (max-width: 1023px) 50vw, 33vw"
+                  className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                  priority={index < 3}
+                />
+              </div>
+
+              {/* CONTENT */}
+
+              <div className="flex flex-1 flex-col p-5">
+
+                <h3 className="text-[20px] font-bold leading-tight text-[#1a1a2e] transition-colors duration-300 group-hover:text-[#0CBFFF]">
+                  {mentor.name}
+                </h3>
+
+                <h6 className="mt-2 text-[13px] font-semibold leading-[1.5] text-[#0CBFFF]">
+                  {mentor.role}
+                </h6>
+
+                <p className="mt-3 text-[14px] text-[#4a4a6a] [text-align:justify]">
+                  {mentor.description}
+                </p>
+
+                <h3 className="mt-5 text-[15px] font-bold text-[#1a1a2e]">
+                  Expertise
+                </h3>
+
+                <ul className="mt-2 space-y-1">
+                  {mentor.expertise.map((item) => (
+                    <li
+                      key={item}
+                      className="text-[13px] leading-[1.5] text-[#4a4a6a]"
+                    >
+                      <span className="mr-1 text-[#0CBFFF]">
+                        •
+                      </span>
+
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+
+              </div>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+
+      {/* RIGHT ARROW */}
+
+      <button
+        type="button"
+        className="mentor-next absolute right-[-18px] top-1/2 z-30 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-[#0CBFFF]/30 
+        bg-white text-[#0CBFFF] shadow-[0_5px_20px_rgba(15,23,42,0.12)] transition-all duration-300 hover:bg-[#0CBFFF] hover:text-white 
+        hover:shadow-[0_8px_25px_rgba(12,191,255,0.35)] max-xl:right-[-10px] max-md:right-[-15px]"
+        aria-label="Next mentor"
+      >
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M9 18l6-6-6-6" />
+        </svg>
+      </button>
+
+    </div>
+  </div>
+</section>
+
       {/* FOREX MODULES */}
-      <section className="bg-slate-100/70 py-20">
+      <section className="  py-20">
         <div className="max-w-6xl mx-auto px-6">
           <SectionEyebrow>Forex Trading Made Simple</SectionEyebrow>
           <h2 className="text-3xl md:text-4xl font-extrabold mt-4 font-['Inter'] max-w-xl leading-tight text-[#1a1a2e]">
@@ -405,8 +899,9 @@ export default function AcademyClient() {
           </h2>
           <p className="text-[#4a4a6a] mt-4 max-w-2xl leading-relaxed">
             Gain a complete understanding of currency trading through six easily
-            accessible modules covering essential concepts, practical strategies,
-            and the skills needed to navigate the markets confidently.
+            accessible modules covering essential concepts, practical
+            strategies, and the skills needed to navigate the markets
+            confidently.
           </p>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
@@ -418,7 +913,7 @@ export default function AcademyClient() {
       </section>
 
       {/* STOCK MARKET */}
-      <section className="py-20">
+      <section className=" bg-slate-100/70 py-20">
         <div className="max-w-6xl mx-auto px-6">
           <SectionEyebrow>Build Your Stock Market Knowledge</SectionEyebrow>
           <h2 className="text-3xl md:text-4xl font-extrabold font-['Inter'] mt-4 max-w-xl leading-tight text-[#1a1a2e]">
@@ -426,7 +921,8 @@ export default function AcademyClient() {
           </h2>
           <p className="text-[#4a4a6a] mt-4 max-w-2xl leading-relaxed">
             Gain the knowledge to understand the stock market with easy lessons
-            covering investing, research, chart analysis, and portfolio building.
+            covering investing, research, chart analysis, and portfolio
+            building.
           </p>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
@@ -438,16 +934,16 @@ export default function AcademyClient() {
       </section>
 
       {/* LEARNING PATH */}
-      <section className="bg-slate-100/70 py-20">
+      <section className=" py-20">
         <div className="max-w-6xl mx-auto px-6">
           <SectionEyebrow>Your Learning Experience</SectionEyebrow>
           <h2 className="text-3xl md:text-4xl font-extrabold font-['Inter'] mt-4 max-w-xl leading-tight text-[#1a1a2e]">
             A Learning Path Designed for Long-Term Success
           </h2>
           <p className="text-[#4a4a6a] mt-4 max-w-2xl leading-relaxed">
-            Our Forex learning lessons help you build a strong foundation, develop
-            practical skills, and progress with confidence at every stage of your
-            trading journey.
+            Our Forex learning lessons help you build a strong foundation,
+            develop practical skills, and progress with confidence at every
+            stage of your trading journey.
           </p>
 
           <div className="grid sm:grid-cols-3 gap-5 mt-10">
@@ -471,8 +967,16 @@ export default function AcademyClient() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-12 text-left border-t border-white/10 pt-8">
             {[
-              { n: "01", t: "Foundation", d: "Basic concepts and terminology." },
-              { n: "02", t: "Analysis", d: "Technical and fundamental skills." },
+              {
+                n: "01",
+                t: "Foundation",
+                d: "Basic concepts and terminology.",
+              },
+              {
+                n: "02",
+                t: "Analysis",
+                d: "Technical and fundamental skills.",
+              },
               { n: "03", t: "Strategy", d: "Develop trading approaches." },
               { n: "04", t: "Psychology", d: "Master emotional discipline." },
             ].map((s) => (
@@ -562,7 +1066,10 @@ export default function AcademyClient() {
                   Enroll Now
                 </button>
               </Link>
-              <Link href="https://www.youtube.com/@forpipsEducation" target="_blank">
+              <Link
+                href="https://www.youtube.com/@forpipsEducation"
+                target="_blank"
+              >
                 <button className="inline-flex items-center justify-center gap-2 rounded-full border border-white/25 px-6 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:border-[#02BFFD] hover:shadow-[0_0_15px_rgba(2,191,253,0.35)]">
                   View Curriculum
                 </button>
