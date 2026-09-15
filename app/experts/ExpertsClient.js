@@ -75,9 +75,6 @@ const mentors = [
       "Trading Psychology & Trader Mindset",
       "Forex Market Analysis & Strategy",
       "Currency Pairs & Market Dynamics",
-      "Business Development & Sales Strategy",
-      "Client Relationship & Trader Support",
-      "Forex Industry & Market Opportunities",
     ],
   },
 
@@ -91,12 +88,10 @@ const mentors = [
       "Forex Business & Market Strategy",
       "Financial Market Positioning",
       "Global Marketing & Brand Strategy",
-      "Forex Client Acquisition & Growth",
       "Business Development & Market Expansion",
       "Strategic Partnerships & Networking",
       "Sales Growth & Performance",
       "International Market Opportunities",
-      "Forex Business Development & Partnerships",
     ],
   },
 
@@ -114,9 +109,7 @@ const mentors = [
       "Fundamental & Technical Market Insights",
       "Trader Psychology & Discipline",
       "Business Consulting & Strategic Planning",
-      "Client Acquisition & Relationship Building",
-      "Leadership & Business Growth",
-      "Trader Relationship & Client Management",
+      
     ],
   },
 
@@ -134,8 +127,6 @@ const mentors = [
       "Strategic Partnerships",
       "Leadership & Team Development",
       "Client Acquisition & Relationship Management",
-      "Financial Market Opportunities",
-      "Corporate Growth & Decision Making",
     ],
   },
 
@@ -150,8 +141,6 @@ const mentors = [
       "Trading & Investment Education",
       "Technical & Fundamental Analysis",
       "Equities, Indices & Derivatives",
-      "Forex, Gold & Commodities",
-      "Algorithmic Trading & Trading Systems",
       "Risk Management & Trading Psychology",
       "Portfolio Building & Investment Strategies",
       "Financial Market Mentoring",
@@ -171,8 +160,6 @@ const mentors = [
       "Risk Management",
       "Client & Trader Mentoring",
       "Forex Business & Sales Strategy",
-      "Network & Team Development",
-      "Trading & Business Psychology",
       "International Market Experience",
     ],
   },
@@ -187,10 +174,8 @@ const mentors = [
       "Forex & Financial Markets",
       "Web3 & Digital Assets",
       "Trading & Market Education",
-      "Sales & Business Development",
       "Strategic Marketing & Branding",
       "Business & Network Growth ",
-      "Leadership & Team Development",
       "Trading Psychology & Risk Management",
       "Forex Industry Growth & Market Opportunities",
     ],
@@ -207,15 +192,14 @@ const mentors = [
       "Global Team Building",
       "Business Development",
       "Investor & Client Relations",
-      "Leadership & Network Development",
       "International Market Expansion",
-      "Strategic Partnerships & Growth",
+      "Leadership & Network Development",
     ],
   },
   {
     name: "Mr. Tayyab Malik ",
     role: "Forex & Crypto Trader | Financial Markets Mentor | Live Trading Expert | Trading Education Specialist",
-    image: "/profile/profile11.jpeg",
+    image: "/profile/profile11.png",
     description:
       "Tayyab Malik has 6 years of experience in the financial markets, with 4 years dedicated to mentoring students across Forex and Crypto markets. With 3 years of hands-on live trading experience, he focuses on practical, real-market learning. He regularly guides students through live market sessions, helping them understand market movements, trading strategies, and risk management. His goal is to make trading education practical, easy to understand, and useful for traders at every stage.",
     expertise: [
@@ -223,33 +207,24 @@ const mentors = [
       " Stock Market Insights",
       " Crypto Market Analysis",
       " Live Trading & Market Practice",
-      " Trading Strategy Development",
-      " Technical Analysis & Chart Reading",
       " Risk Management & Capital Protection",
-      " Practical Trading Education",
-      " Student Mentoring & Guidance",
       " Market Psychology & Trading Discipline",
-      " Real-Time Market Learning",
       " Trader Skill Development",
     ],
   },
   {
     name: "Mr. Lovel Rajput",
     role: "Forex & Stock Market Expert | NISM Research Analyst | Trading Mentor | Financial Markets Educator",
-    image: "/profile/profile10.jpeg",
+    image: "/profile/profile10.png",
     description:
       "Lovel Rajput began his trading journey in 2016 and brings over a decade of experience in the financial markets, including expertise in Forex, Crypto, stock markets, and options trading. As a NISM-certified Research Analyst and experienced trading mentor, he has trained over 22K students, focusing on making trading simple, practical, and easy to understand. Through his academy and trading community, Lovel shares real-market knowledge, develops disciplined traders, and helps learners build confidence through effective strategies, market analysis, and practical education.",
     expertise: [
       "Forex Trading Education & Mentoring",
       "Stock Market Analysis",
       "Options Trading & Strategies",
-      "Forex & Currency Market Analysis",
       "Crypto Market Insights",
       "Technical & Fundamental Analysis",
       "Trading Strategy Development",
-      "Trader Psychology & Discipline",
-      "Market Research & Decision Making",
-      "Portfolio & Trade Management",
       "Financial Market Mentoring",
     ],
   },
@@ -821,7 +796,7 @@ function Section4() {
                   <div className="group flex h-full flex-col overflow-hidden rounded-[12px] border-2 border-[#0CBFFF]/30 bg-white shadow-[0_3px_16px_rgba(15,23,42,0.04)] transition-all duration-300 hover:-translate-y-1 hover:border-[#0CBFFF] hover:shadow-[0_10px_30px_rgba(12,191,255,0.20)]">
                     {/* IMAGE */}
 
-                    <div className="h-[250px] w-full shrink-0 overflow-hidden bg-slate-200">
+                    <div className="h-[200px] w-full shrink-0 overflow-hidden bg-slate-200">
                       <Image
                         src={mentor.image}
                         alt={mentor.name}
