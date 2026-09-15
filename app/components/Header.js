@@ -38,28 +38,56 @@ export default function Header() {
 
         {/* Desktop Navigation */}
         <nav className="hidden items-center gap-5 min-[1212px]:flex lg:gap-7">
-          {navLinks.map(({ label, href }) => (
-            <Link
-              key={label}
-              href={href}
-              className="
-                whitespace-nowrap
-                font-[Inter,ui-sans-serif,sans-serif]
-                text-[13px]
-                font-medium
-                transition-colors
-                duration-200
-                hover:text-[#02BFFD]
-                lg:text-sm
-              "
-              style={{
-                color: pathname === href ? '#02BFFD' : '#000000'
-              }}
-            >
-              {label}
-            </Link>
-          ))}
-        </nav>
+  {navLinks.map(({ label, href }) => {
+    const isExternal = href.startsWith("http");
+
+    return isExternal ? (
+      <a
+        key={label}
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="
+          whitespace-nowrap
+          font-[Inter,ui-sans-serif,sans-serif]
+          text-[13px]
+          font-medium
+          transition-colors
+          duration-200
+          hover:text-[#02BFFD]
+          lg:text-sm
+        "
+        style={{
+          color: pathname === href ? "#02BFFD" : "#000000",
+        }}
+      >
+        {label}
+      </a>
+    ) : (
+      <Link
+        key={label}
+        href={href}
+        className="
+          whitespace-nowrap
+          font-[Inter,ui-sans-serif,sans-serif]
+          text-[13px]
+          font-medium
+          transition-colors
+          duration-200
+          hover:text-[#02BFFD]
+          lg:text-sm
+        "
+        style={{
+          color: pathname === href ? "#02BFFD" : "#000000",
+        }}
+      >
+        {label}
+      </Link>
+    );
+  })}
+</nav>
+
+
 
         {/* Desktop Actions */}
         <div className="hidden items-center gap-2 min-[1212px]:flex lg:gap-3">
@@ -85,7 +113,7 @@ export default function Header() {
               lg:text-sm
             "
           >
-            Client Login
+             Login
           </a>
 
           <a
@@ -110,7 +138,7 @@ export default function Header() {
               lg:text-sm
             "
           >
-            Open Trading Account (IB)
+            Open  Account
           </a>
         </div>
 
@@ -224,7 +252,7 @@ export default function Header() {
                 hover:text-[#02BFFD]
               "
             >
-              Client Login
+               Login
             </a>
 
             {/* Open Trading Account */}
@@ -251,7 +279,7 @@ export default function Header() {
                 hover:bg-[#08aee9]
               "
             >
-              Open Trading Account (IB)
+              Open  Account 
             </a>
 
           </div>
