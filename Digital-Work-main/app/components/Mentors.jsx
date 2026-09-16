@@ -7,28 +7,28 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 const MENTORS = [
-   {
+  {
     name: "MR. SHIVRAJ SINGH",
-    role: "Transformational Coach | Financial Markets Expert | Leadership Mentor | Sales & Marketing Strategist ",
-    body: "Mr. Shivraj Singh is a highly experienced Transformational Coach, Financial Markets Expert, Leadership Mentor, and Sales & Marketing Strategist with 27 years of experience in financial markets, sales, direct selling, leadership, and business development.Over nearly three decades, he has built and led teams of millions of people, gained worldwide global exposure, and played a significant role in transforming thousands of lives through coaching, leadership, financial awareness, sales expertise, and business development.",
+    role: "Transformational Coach | Financial Markets Expert | Leadership Mentor | Sales & Marketing Strategist",
+    body: "Mr. Shivraj Singh is a highly experienced Transformational Coach, Financial Markets Expert, Leadership Mentor, and Sales & Marketing Strategist with 27 years of experience in financial markets, sales, direct selling, leadership, and business development. Over nearly three decades, he has built and led teams of millions of people, gained worldwide global exposure, and played a significant role in transforming thousands of lives through coaching, leadership, financial awareness, sales expertise, and business development.",
     image: "/profile/profile9.webp",
   },
   {
     name: "Mr. Ali",
-    role: "Entrepreneur | Sales Strategist | Business Development Leader | IT Business Owner ",
-    body: "Mr. Ali is a visionary entrepreneur and accomplished sales leader with extensive experience in business development, strategic partnerships, and revenue growth. As the founder and owner of multiple IT companies, he has successfully built and scaled technologydriven businesses while leading high-performing sales teams. His expertise lies in identifying market opportunities, driving customer acquisition, and creating sustainable business growth through innovative sales strategies and strong client relationships. ",
+    role: "Entrepreneur | Sales Strategist | Business Development Leader | IT Business Owner",
+    body: "Mr. Ali is a visionary entrepreneur and accomplished sales leader with extensive experience in business development, strategic partnerships, and revenue growth. As the founder and owner of multiple IT companies, he has successfully built and scaled technology-driven businesses while leading high-performing sales teams. His expertise lies in identifying market opportunities, driving customer acquisition, and creating sustainable business growth through innovative sales strategies and strong client relationships.",
     image: "/profile/profile1.webp",
   },
   {
-    name: "Mr. Khushal Sharma ",
-    role: "Entrepreneur I Business Strategist I Forex Educator ",
-    body: "Mr. Khushal Sharma is an entrepreneur and forex educator with 10+ years of experience in business development, financial markets, and leadership. He is passionate about helping traders build strong market knowledge, develop disciplined trading approaches, and understand opportunities within the global forex market. He focuses on practical learning, strategic thinking, and developing a deeper understanding of financial markets. His experience helps traders gain confidence and approach the market with discipline and clarity. ",
+    name: "Mr. Khushal Sharma",
+    role: "Entrepreneur | Business Strategist | Forex Educator",
+    body: "Mr. Khushal Sharma is an entrepreneur and forex educator with 10+ years of experience in business development, financial markets, and leadership. He is passionate about helping traders build strong market knowledge, develop disciplined trading approaches, and understand opportunities within the global forex market. He focuses on practical learning, strategic thinking, and developing a deeper understanding of financial markets. His experience helps traders gain confidence and approach the market with discipline and clarity.",
     image: "/profile/profile5.webp",
   },
   {
-    name: "Mr. Baha ",
-    role: "Marketing Strategist | Business Visionary | Global Entrepreneur ",
-    body: "Mr. Baha is a globally recognized marketing strategist and entrepreneur with 21+ years of experience in business growth, brand development, and international markets. He brings expertise in financial market positioning, forex business development, strategic growth, and building long-term client relationships. His expertise helps businesses identify new opportunities, strengthen market presence, and build lasting relationships. He focuses on strategic growth, effective marketing, and sustainable business development. ",
+    name: "Mr. Baha",
+    role: "Marketing Strategist | Business Visionary | Global Entrepreneur",
+    body: "Mr. Baha is a globally recognized marketing strategist and entrepreneur with 21+ years of experience in business growth, brand development, and international markets. He brings expertise in financial market positioning, forex business development, strategic growth, and building long-term client relationships. His expertise helps businesses identify new opportunities, strengthen market presence, and build lasting relationships. He focuses on strategic growth, effective marketing, and sustainable business development.",
     image: "/profile/profile3.webp",
   },
   {
@@ -38,57 +38,56 @@ const MENTORS = [
     image: "/profile/profile4.webp",
   },
   {
-    name: "Mr. Dushyant Kumar ",
-    role: "Business Leader | Growth Strategist | Corporate Mentor ",
-    body: "Mr. Dushyant Kumar is a highly accomplished business leader and corporate strategist with 10+ years of experience in business development, leadership, and organizational growth. He specializes in financial markets, business expansion, and sustainable growth strategies. Known for strategic thinking and strong leadership, he transforms complex challenges into practical growth opportunities. His focus on innovation, partnerships, and long-term value creation drives sustainable business growth. ",
-    image: "/profile/profile2.webp"
+    name: "Mr. Dushyant Kumar",
+    role: "Business Leader | Growth Strategist | Corporate Mentor",
+    body: "Mr. Dushyant Kumar is a highly accomplished business leader and corporate strategist with 10+ years of experience in business development, leadership, and organizational growth. He specializes in financial markets, business expansion, and sustainable growth strategies. Known for strategic thinking and strong leadership, he transforms complex challenges into practical growth opportunities. His focus on innovation, partnerships, and long-term value creation drives sustainable business growth.",
+    image: "/profile/profile2.webp",
   },
   {
-    name: "Mr. Prakash Janawade ",
-    role: "Global Trading & Investment Mentor | Stock Market Research Analyst | Financial Educator ",
-    body: "Prakash Janawade is a globally focused trading and investment mentor with 10+ years of real-world market experience, making financial markets practical, structured, and easy to understand. As a NISM Certified Research Analyst and AMFI Certified professional, he combines market research, technical analysis, trading psychology, risk management, and systematic decision-making. His expertise helps traders and investors build knowledge, confidence, manage risk, and make informed decisions across changing markets. ",
+    name: "Mr. Prakash Janawade",
+    role: "Global Trading & Investment Mentor | Stock Market Research Analyst | Financial Educator",
+    body: "Prakash Janawade is a globally focused trading and investment mentor with 10+ years of real-world market experience, making financial markets practical, structured, and easy to understand. As a NISM Certified Research Analyst and AMFI Certified professional, he combines market research, technical analysis, trading psychology, risk management, and systematic decision-making. His expertise helps traders and investors build knowledge, confidence, manage risk, and make informed decisions across changing markets.",
     image: "/profile/profile6.webp",
-      },
-  {
-    name: "Mr. Safdar Ali ",
-    role: "Forex Educator | Trading Mentor | Sales & Business Development Specialist  ",
-    body: "Safdar Ali is an experienced Forex educator and trading mentor with extensive international expertise in financial markets, sales, client relationships, and business development. He specializes in practical Forex education, market understanding, risk management, and trading psychology. With networks of 4.5M+ people across 103 countries, he brings strong market knowledge, leadership, communication, and realworld business experience to his mentoring and educational approach for aspiring traders. ",
-    image: "/profile/profile7.webp", 
-  },
-    {
-    name: "Ms. Akanksha Saxena ",
-    role: "Entrepreneur | Forex & Web3 Leader | Marketing Head | Financial Markets Mentor ",
-    body: "Ms. Akanksha Saxena is a seasoned entrepreneur, marketing leader, and financial markets mentor with 8+ years of experience across Forex, Web3, digital assets, business growth, and strategic marketing. She combines market expertise, entrepreneurial vision, and leadership skills to build strong networks, drive sustainable business growth, and help individuals understand emerging financial opportunities. Her strategic approach focuses on innovation, effective marketing, and creating long-term value across evolving global markets. ",
-    image: "/profile/profile8.webp", 
   },
   {
-    name: "Ms. Sadaf Ali ",
+    name: "Mr. Safdar Ali",
+    role: "Forex Educator | Trading Mentor | Sales & Business Development Specialist",
+    body: "Safdar Ali is an experienced Forex educator and trading mentor with extensive international expertise in financial markets, sales, client relationships, and business development. He specializes in practical Forex education, market understanding, risk management, and trading psychology. With networks of 4.5M+ people across 103 countries, he brings strong market knowledge, leadership, communication, and real-world business experience to his mentoring and educational approach for aspiring traders.",
+    image: "/profile/profile7.webp",
+  },
+  {
+    name: "Ms. Akanksha Saxena",
+    role: "Entrepreneur | Forex & Web3 Leader | Marketing Head | Financial Markets Mentor",
+    body: "Ms. Akanksha Saxena is a seasoned entrepreneur, marketing leader, and financial markets mentor with 8+ years of experience across Forex, Web3, digital assets, business growth, and strategic marketing. She combines market expertise, entrepreneurial vision, and leadership skills to build strong networks, drive sustainable business growth, and help individuals understand emerging financial opportunities. Her strategic approach focuses on innovation, effective marketing, and creating long-term value across evolving global markets.",
+    image: "/profile/profile8.webp",
+  },
+  {
+    name: "Ms. Sadaf Ali",
     role: "Financial Markets Expert | Global Network Builder | Trading & Business Development Leader",
     body: "Sadaf Ali is an experienced Financial Markets Professional with strong expertise in trading, digital assets, exchanges, business development, and global team building. Since 2023, Sadaf has built and led large international networks comprising thousands of members, with experience across multiple financial and digital-asset platforms and involvement in building and developing multimillion-dollar business operations.",
-    image: "/profile/Sadaf.png", 
+    image: "/profile/Sadaf.png",
   },
-   {
-    name: "Mr. Tayyab Malik ",
+  {
+    name: "Mr. Tayyab Malik",
     role: "Forex & Crypto Trader | Financial Markets Mentor | Live Trading Expert | Trading Education Specialist",
     body: "Tayyab Malik has 6 years of experience in the financial markets, with 4 years dedicated to mentoring students across Forex and Crypto markets. With 3 years of hands-on live trading experience, he focuses on practical, real-market learning. He regularly guides students through live market sessions, helping them understand market movements, trading strategies, and risk management. His goal is to make trading education practical, easy to understand, and useful for traders at every stage.",
-    image: "/profile/profile11.png",  
+    image: "/profile/profile11.png",
   },
-
-    {
+  {
     name: "Mr. Lovel Rajput",
     role: "Forex & Stock Market Expert | NISM Research Analyst | Trading Mentor | Financial Markets Educator",
+    body: "Lovel Rajput began his trading journey in 2016 and brings over a decade of experience in the financial markets, including expertise in Forex, Crypto, stock markets, and options trading. As a NISM-certified Research Analyst and experienced trading mentor, he has trained over 22K students, focusing on making trading simple, practical, and easy to understand. Through his academy and trading community, Lovel shares real-market knowledge, develops disciplined traders, and helps learners build confidence through effective strategies, market analysis, and practical education.",
     image: "/profile/profile10.png",
-    body:"Lovel Rajput began his trading journey in 2016 and brings over a decade of experience in the financial markets, including expertise in Forex, Crypto, stock markets, and options trading. As a NISM-certified Research Analyst and experienced trading mentor, he has trained over 22K students, focusing on making trading simple, practical, and easy to understand. Through his academy and trading community, Lovel shares real-market knowledge, develops disciplined traders, and helps learners build confidence through effective strategies, market analysis, and practical education.",
-   
   },
-
 ];
 
 export default function Mentors() {
   return (
-    <section className="w-full py-12 sm:py-16 md:py-20" style={{ backgroundColor: '#f8f9fa' }}>
+    <section
+      className="w-full py-12 sm:py-16 md:py-20"
+      style={{ backgroundColor: "#f8f9fa" }}
+    >
       <div className="mx-auto max-w-[1480px] px-4 sm:px-5 md:px-8">
-
         {/* Heading */}
         <div className="mb-10 text-center sm:mb-12">
           <span className="text-[10px] font-semibold uppercase tracking-wider text-[#0CBFFF] sm:text-xs">
@@ -296,7 +295,6 @@ export default function Mentors() {
             </svg>
           </button>
         </div>
-
       </div>
     </section>
   );
