@@ -1,2 +1,0 @@
-# Forpips-latest
-Nextjs
