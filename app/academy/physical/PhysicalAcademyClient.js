@@ -230,7 +230,7 @@ export default function PhysicalAcademyClient() {
         </div>
       </section>
 
-      <div className="relative z-20 mx-auto -mt-12 max-w-4xl px-6">
+      <div className=" hidden relative z-20 mx-auto -mt-12 max-w-4xl px-6">
         <form onSubmit={handleSearch} className="flex flex-col gap-2.5 rounded-2xl border border-slate-200 bg-white p-3 shadow-xl shadow-slate-200/60 sm:flex-row">
           <label className="flex h-11 flex-1 items-center gap-2 rounded-lg border border-slate-200 px-3 focus-within:border-cyan-400 focus-within:ring-2 focus-within:ring-cyan-100">
             <MapPin className="h-4 w-4 text-slate-400" aria-hidden="true" />
