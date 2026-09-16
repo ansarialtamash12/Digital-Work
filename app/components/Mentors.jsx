@@ -67,6 +67,18 @@ const MENTORS = [
     body: "Sadaf Ali is an experienced Financial Markets Professional with strong expertise in trading, digital assets, exchanges, business development, and global team building. Since 2023, Sadaf has built and led large international networks comprising thousands of members, with experience across multiple financial and digital-asset platforms and involvement in building and developing multimillion-dollar business operations.",
     image: "/profile/Sadaf.png", 
   },
+  {
+    name: "Mr. Tayyab Malik",
+    role: "Forex & Crypto Trader | Financial Markets Mentor | Live Trading Expert | Trading Education Specialist",
+    body: "Tayyab Malik has 6 years of experience in the financial markets, with 4 years dedicated to mentoring students across Forex and Crypto markets. With 3 years of hands-on live trading experience, he focuses on practical, real-market learning. He regularly guides students through live market sessions, helping them understand market movements, trading strategies, and risk management. His goal is to make trading education practical, easy to understand, and useful for traders at every stage.",
+    image: "/profile/profile11.png",
+  },
+  {
+    name: "Mr. Lovel Rajput",
+    role: "Forex & Stock Market Expert | NISM Research Analyst | Trading Mentor | Financial Markets Educator",
+    body: "Lovel Rajput began his trading journey in 2016 and brings over a decade of experience in the financial markets, including expertise in Forex, Crypto, stock markets, and options trading. As a NISM-certified Research Analyst and experienced trading mentor, he has trained over 22K students, focusing on making trading simple, practical, and easy to understand. Through his academy and trading community, Lovel shares real-market knowledge, develops disciplined traders, and helps learners build confidence through effective strategies, market analysis, and practical education.",
+    image: "/profile/profile10.png",
+  },
 ];
 
 export default function Mentors() {
