@@ -396,8 +396,7 @@ export default function AcademyClient() {
                 </button>
               </Link>
               <Link
-                href="https://www.youtube.com/@forpipsEducation"
-                target="_blank"
+                href="/academy/physical"
               >
                 <button className="inline-flex items-center justify-center gap-2 rounded-full border border-white/25 px-6 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:border-[#02BFFD] hover:shadow-[0_0_15px_rgba(2,191,253,0.35)]">
                   View Curriculum
@@ -680,8 +679,7 @@ export default function AcademyClient() {
                 </button>
               </Link>
               <Link
-                href="https://www.youtube.com/@forpipsEducation"
-                target="_blank"
+                href="/academy/physical"
               >
                 <button className="inline-flex items-center justify-center gap-2 rounded-full border border-white/25 px-6 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:border-[#02BFFD] hover:shadow-[0_0_15px_rgba(2,191,253,0.35)]">
                   View Curriculum
